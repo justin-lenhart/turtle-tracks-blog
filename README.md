@@ -177,6 +177,29 @@ git commit -m "New post: ..."
 git push
 ```
 
+##### Map page gotchas
+
+Three separate things broke the flight map. All were silent.
+
+1. **Inline `<script>` in markdown gets mangled.** A blank line inside an inline
+   script ends the HTML block, and Hugo parses the rest as markdown — quotes
+   become smart quotes, `=>` becomes `=&gt;`, indented lines become a code
+   block. Keep JS in `static/js/`, never inline.
+
+2. **Blowfish declares its own global `const L`,** which hides Leaflet's `L`
+   from any script that runs later. `window.L` is still Leaflet; the bare name
+   `L` is not. `flight-map.js` starts with `const L = window.L;` for this
+   reason — don't remove it.
+
+3. **`fitBounds` must wait a frame.** The article column is still sizing when
+   the script runs. If Leaflet measures a 0-width container it zooms to level
+   19 and shows a blank grey square. The fix is the `requestAnimationFrame`
+   wrapper around `invalidateSize()` + `fitBounds()`.
+
+Also: the map div needs an explicit `width` in its style attribute. Blowfish
+wraps article content in `max-w-fit`, which sizes to the text — without a
+width the map collapses to a narrow strip.
+
 ##### Gotchas that already cost time
 
 - **Don't use `hugo --quiet` when something is wrong.** It hides real build
