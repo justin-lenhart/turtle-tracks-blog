@@ -29,6 +29,7 @@ enableEmoji = true
   category = "categories"
   author = "authors"
   series = "series"
+  project = "projects"
 
 [sitemap]
   changefreq = 'daily'

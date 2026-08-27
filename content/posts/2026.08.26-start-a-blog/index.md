@@ -1,8 +1,8 @@
 ---
-title: How this came to be"
-date: 2026-08-20
+title: How this came to be
+date: 2026-08-26
 summary: "When the good idea fairy finally visits."
-tags: ["dev", "project"]
+projects: ["blog"]
 categories: ["Blog"]
 ---
 
@@ -35,4 +35,4 @@ That's about it.
 **Rational**
 Hugo seemed like the least friction. A simple `brew install hugo` installed it. Blowfish, if you have not heard of it, is AWESOME. This is my first go at making a static site, so I have no baseline, but Blowfish gives a VERY wide array of tools for site creation. Indeed, I seriously doubt I will be lacking for any sort of desired feature. Of note, Blowfish supports direct in-frame Youtube videos, GitHub repositories, and many other content options. This is (mostly) achieved via a  something they call 'short code', which are tidbits of code you place in the markdown files comprising your site pages. 
 
-![On the ramp](photo1.jpg)
+![On the ramp](featured_2026.08.26_1.jpeg)
