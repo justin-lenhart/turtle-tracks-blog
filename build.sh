@@ -10,7 +10,7 @@ export PATH="$PWD:$PATH"
 hugo version
 
 echo "--> Fetching theme submodule"
-git submodule update --init --recursive
+git submodule update --init --recursive --depth 1
 test -f themes/blowfish/theme.toml || { echo "ERROR: Blowfish submodule missing"; exit 1; }
 
 echo "--> Building site"
