@@ -1,6 +1,28 @@
+##### Tags, Categories, and Projects
+
+| Type        | What             | Examples |
+| ------------- |:-------------: | -------:|
+| categories    | What *shape*?  | `Work`, `Fun`, `Project`         |
+| tags          | centered       | `woodworking`, `hiking`, `dev`   |
+| projects      | are neat       | `turtle-tracks`, `bread-box`,    |
+###### Categories - Big picture
+* Work
+* Fun
+* Project
+###### Tags - What is this about? 
+woodworking
+hiking
+smartHome
+electronics
+travel
+
+
+###### Projects
+Maintained through posts
+
 ##### Useful  settings:
 
- **hugo.toml is in** `config/_default`
+ **config files are in** `config/_default`
 
 - Theme         -- `config/_default/hugo.toml`
 - **site title       --** `config/_default/languages.en.toml` 
@@ -23,7 +45,7 @@ turtle-tracks-blog/
 │       └── avatar.jpg              author image -> "img/avatar.jpg" in config
 ├── config/
 │   └── _default/
-│       ├── hugo.toml               theme, baseURL, taxonomies
+│       ├── hugo.toml               theme, baseURL, taxonomies, bkg image
 │       ├── languages.en.toml       site title, [params.author]
 │       ├── markup.toml             unsafe=true lives here (don't touch)
 │       ├── menus.en.toml           nav
@@ -71,12 +93,6 @@ generated — gitignored, never committed:
 ├── public/                         the built site
 └── resources/                      Hugo's image-processing cache
 
-| Type        | What             | Examples |
-| ------------- |:-------------: | -------:|
-| categories    | Whate *shape*? |Work, Fun, Project                                |
-| tags          | centered       | `woodwork`, `national-park`, `development`,      |
-| projects      | are neat       | `turtle-tracks`, `bread-box`, `financial-tracker`|
-
 ##### Useful terminal commands
 **Deploy local site**
 `hugo server -D --disableFastRender --noHTTPCache` 
@@ -86,6 +102,7 @@ generated — gitignored, never committed:
 [Blowfish ]
 [Lempa Video 1/2 - Build Static Site](https://www.youtube.com/watch?v=MX4yy1dTVYg&t=820s)
 [Lempa Video 2/2 - Publish Static Site](https://www.youtube.com/watch?v=FZMgUSlNp-0&list=PLL2R0PhD_K3E&index=3)
+[Cloudflare deployment dashboard](https://dash.cloudflare.com/fb90c5484e857484c4d69a2226ea081e/workers/services/view/turtle-tracks-blog/production/domains)
 
 
 ##### Issues
@@ -118,7 +135,7 @@ Show/hide the bits around it — all in `[article]` / `config/_default/params.to
 - `showWordCount` -- the "638 words" text
 - `showReadingTime` -- "3 min read"
 
-##### How projects work
+##### Projects
 
 A project is a **folder** under `content/projects/`, with an `_index.md` inside.
 It uses `_index.md` (not `index.md`) because the page lists other pages — its
@@ -136,14 +153,18 @@ This works because `project = "projects"` is listed under `[taxonomies]` in
 `config/_default/hugo.toml`. Without that line the `projects:` front matter does
 nothing at all.
 
+##### Posts
+`/content/posts`
+* Make *folder* with 
+
+##### Updating things
+
 A project only appears on `/projects/` once at least one post references it.
 
 ##### assets/ vs static/
 
 - **`assets/`** -- Hugo processes these (resizes, optimizes). Paths are relative
-  to `assets/` itself, so the author image is `img/avatar.jpg`, **not**
-  `assets/img/avatar.jpg`. Getting this wrong produces a confusing
-  `security.http.urls` error that has nothing to do with security.
+  to `assets/` itself, i.e. `img/avatar.jpg`
 - **`static/`** -- copied byte-for-byte. `static/data/flights.geojson` is served
   at `/data/flights.geojson`.
 
@@ -177,40 +198,3 @@ git commit -m "New post: ..."
 git push
 ```
 
-##### Map page gotchas
-
-Three separate things broke the flight map. All were silent.
-
-1. **Inline `<script>` in markdown gets mangled.** A blank line inside an inline
-   script ends the HTML block, and Hugo parses the rest as markdown — quotes
-   become smart quotes, `=>` becomes `=&gt;`, indented lines become a code
-   block. Keep JS in `static/js/`, never inline.
-
-2. **Blowfish declares its own global `const L`,** which hides Leaflet's `L`
-   from any script that runs later. `window.L` is still Leaflet; the bare name
-   `L` is not. `flight-map.js` starts with `const L = window.L;` for this
-   reason — don't remove it.
-
-3. **`fitBounds` must wait a frame.** The article column is still sizing when
-   the script runs. If Leaflet measures a 0-width container it zooms to level
-   19 and shows a blank grey square. The fix is the `requestAnimationFrame`
-   wrapper around `invalidateSize()` + `fitBounds()`.
-
-Also: the map div needs an explicit `width` in its style attribute. Blowfish
-wraps article content in `max-w-fit`, which sizes to the text — without a
-width the map collapses to a narrow strip.
-
-##### Gotchas that already cost time
-
-- **Don't use `hugo --quiet` when something is wrong.** It hides real build
-  errors. Run plain `hugo`.
-- **An empty file builds "successfully."** A 0-byte `build.sh` exits 0 in
-  milliseconds and deploys nothing. Check `wc -c` before committing a new file.
-- **Editing isn't committing.** Twice a fix was correct on disk but never
-  committed. `git status` should be clean before you go looking for other causes.
-- **Don't add a second `[taxonomies]` block** to `hugo.toml`. Blowfish already
-  defines one (tag/category/author/series); a second block replaces it instead of
-  extending it. Add new lines inside the existing block.
-- **Cloudflare doesn't clone submodules.** `build.sh` runs
-  `git submodule update --init --recursive --depth 1` for that reason. Without
-  it Hugo builds zero pages and reports success.

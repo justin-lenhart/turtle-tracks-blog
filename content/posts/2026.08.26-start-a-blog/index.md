@@ -1,38 +1,76 @@
 ---
-title: How this came to be
+title: "How this came to be"
 date: 2026-08-26
 summary: "When the good idea fairy finally visits."
 projects: ["blog"]
-categories: ["Blog"]
+categories: ["Projects"]
+tags: ["hugo", "meta"]
 ---
 
-# My First Blog Post
-
-A short blurb of how this blog started
+I've wanted to start a blog for about three years. This is the part where I
+finally did, and the reasoning behind how it's built.
 
 #### Background
-I've long been a 'techy' and 'hobby' person, especially in comparison to the people I work with, love, and surround myself in. I've built several custom tools for things such as expense and pilot hours tracking. On my few off days, you can often find me at a local wood workshop attempting to learn some new woodworking skill or constructing a trinket of some sort or another for a loved one. I've used more markdown editors, vector designers, IDEs, email clients, and such than I could possibly tally. I have both Home Assistant and HomeKit running at my house. Right now, connected to my home network is a Raspberry Pi 4B hosting PhotoPrism At the same time, my job involves traveling to MANY unique locations across the United States, and if I can get more than 7 days off from work in a row, you'll find me strapping my 60L backpack on for a 4 day backpacking hike through a wilderness where I will likely see more bears than humans. I love to take photos of beautiful landscapes and scenery - even if the photos never quite do justice to reality. 
 
-While my life isn't particularly special, I've always thought it'd be pretty awesome to document all of these various projects and travels. Maybe more for my personal consumption, but still out there, in case anyone else finds the stuff I do interesting. To that end, I've been wanting to start a blog for well over three years. I initially signed up for a WordPress(.com) account sometime in 2024, and handed over a few bucks for a custom domain name. I didn't like it. 
+I've long been the "techy hobby person" relative to the people I work with and
+love. I've built custom tools for expense tracking and pilot hours. On my few
+days off you can usually find me at a local wood workshop, learning some skill
+badly or building a trinket for someone. I've used more markdown editors,
+vector designers, IDEs, and email clients than I could possibly tally. I run
+both Home Assistant and HomeKit at home, and there's a Raspberry Pi 4B on my
+network hosting PhotoPrism.
 
-My inner nerd hated how a supposedly 'quick start' template was forced on me. I wanted to see the source code of the site, not preview thumbnails for the ungodly amount of themes available. I wanted something simple, not convulted and overly complex AI-generated designs. Some time has gone between that original WordPress sign up and now, but I learned of something crucial - the missing link - static sites. Just a few .toml and .md files which a generator converts into a website that can be as simple or as complex as I make it. 
+My job takes me to a lot of unique places across the country. When I can string
+together more than seven days off, I'll strap on a 60L pack for four days in
+some wilderness where I'll see more bears than people. I take a lot of photos of
+landscapes, even though they never quite do the real thing justice.
 
-#### Design Requirements
-1. An input system that allows me to seamlessly and quickly record what I want to write about. A system that let's me open my laptop and write a quick 'something' during the 20 minutes I have in between flights, or the 30 minute lunch break I give myself while working on a project. While nerdy and willing to work the nitty details for initial setup, the actual posting of content must be simple. 
-2. Allows posting of photographs from my PhotoPrism instance. 
-3. Allows text based editing of the site. i.e., cannot be anything resembling the WordPress.com website 'creator' (I am unsure what WordPress actually calls their system)
+My life isn't particularly special, but I've always thought it'd be nice to
+document the projects and the travel. Mostly for me — but out there, in case
+anyone else finds it interesting.
 
-That's about it. 
+I signed up for a WordPress.com account sometime in 2024 and paid for a custom
+domain. I didn't like it.
 
-##### The Tools:
-1. Hugo - for the static site generation
-2. Blowfish - for the website template
-3. CloudFlare Workers - for hosting
-4. Cursor - for website editing
-5. Obsidian - for posting
-6. PhotoPrism - for photo storage
+My inner nerd hated that a "quick start" template was forced on me. I wanted to
+see the source of my own site, not scroll preview thumbnails for an ungodly
+number of themes. I wanted something simple, not convoluted and full of
+AI-generated filler. Somewhere between that signup and now I learned about the
+missing piece: **static sites.** A handful of `.toml` and `.md` files that a
+generator turns into a website, as simple or as complex as I decide to make it.
 
-**Rational**
-Hugo seemed like the least friction. A simple `brew install hugo` installed it. Blowfish, if you have not heard of it, is AWESOME. This is my first go at making a static site, so I have no baseline, but Blowfish gives a VERY wide array of tools for site creation. Indeed, I seriously doubt I will be lacking for any sort of desired feature. Of note, Blowfish supports direct in-frame Youtube videos, GitHub repositories, and many other content options. This is (mostly) achieved via a  something they call 'short code', which are tidbits of code you place in the markdown files comprising your site pages. 
+#### Design requirements
+
+1. **Fast to write in.** I need to open my laptop and get something down during
+   the twenty minutes between flights, or the half hour I give myself for lunch
+   mid-project. I'm happy to fight the nitty-gritty during setup, but the actual
+   posting has to be frictionless.
+2. **Photos from my PhotoPrism instance.**
+3. **Text-based editing.** Nothing resembling the WordPress.com visual builder.
+
+That's it.
+
+#### The tools
+
+| | |
+| --- | --- |
+| **Hugo** | static site generation |
+| **Blowfish** | theme |
+| **Cloudflare Workers** | hosting |
+| **Cursor** | writing posts and editing the site |
+| **PhotoPrism** | photo storage |
+| **Obsidian** | *planned* — not set up yet |
+
+Hugo was the least friction: a single `brew install hugo`. Blowfish, if you
+haven't come across it, is genuinely great. This is my first static site so I
+have no baseline, but it gives a very wide array of building blocks and I doubt
+I'll want for a feature. It supports embedded YouTube videos, GitHub repos, and
+plenty more, mostly through what it calls **shortcodes** — small snippets you
+drop into the markdown of a page.
+
+Right now I'm writing everything in Cursor, same place I edit the site itself.
+Obsidian is on the list — the idea is to point a vault at the `content/` folder
+so I can draft on the couch without thinking about the repo — but I haven't set
+it up, and Cursor is working fine.
 
 ![On the ramp](featured_2026.08.26_1.jpeg)
