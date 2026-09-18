@@ -1,24 +1,26 @@
 {{/*
-  Lists every image in assets/img/favorites/ as gallery tiles, resized for the
-  web. Nothing to list by hand: drop a file in, it appears; delete a file, it
-  disappears. Sorted by filename, so a "01-" prefix puts a photo first.
+  Outputs every image in assets/img/favorites/ as a gallery tile, resized for
+  the web. There is no list to edit. Add a file to the folder and it appears.
+  Delete a file and it disappears. The shortcode sorts tiles by filename, so
+  a "01-" prefix puts a photo first.
 
-  Must be used INSIDE the theme's gallery block, which supplies the grid
-  styling. In content/_index.md:
+  Use this shortcode INSIDE the theme's gallery block. The gallery block
+  supplies the grid styling. In content/_index.md:
 
     {{< gallery >}}{{< favorites >}}{{< /gallery >}}
     {{< gallery >}}{{< favorites limit="9" >}}{{< /gallery >}}   first 9 only
 
-  Tile width: grid-w50 = 2 per row on phones, md:grid-w33 = 3 per row on
-  larger screens. Change to md:grid-w25 for 4 per row.
+  Tile width: grid-w50 = 2 per row on phones. md:grid-w33 = 3 per row on
+  larger screens. Use md:grid-w25 for 4 per row.
 */}}
 {{ $limit := int (.Get "limit" | default 0) }}
 {{ $images := sort (resources.Match "img/favorites/*.{jpg,jpeg,png,webp}") "Name" }}
 {{ if gt $limit 0 }}{{ $images = first $limit $images }}{{ end }}
-{{/* No loading="lazy" here: the theme's masonry script measures tile heights on
-     window load, and lazy images haven't loaded yet, so every tile would be
-     0 px tall and they'd all pile up at the top. width/height let the browser
-     reserve the right space before the file arrives. */}}
+{{/* Do not add loading="lazy". The theme's layout script measures tile
+     heights on window load. Lazy images are not loaded at that time, so each
+     tile measures 0 px and all tiles stack at the top. The width and height
+     attributes let the browser reserve the correct space before the file
+     loads. */}}
 {{ range $images }}
   {{ $small := .Resize "800x q78" }}
   <img src="{{ $small.RelPermalink }}" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ path.BaseName .Name }}" class="grid-w50 md:grid-w33" />

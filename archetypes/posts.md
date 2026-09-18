@@ -2,12 +2,12 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date | time.Format "2006-01-02" }}
 summary: ""
-# projects: ["blog"]        # folder name under content/projects/, or delete this line
+# projects: ["blog"]        # a folder name under content/projects/. Delete this line if none.
 categories: ["Work"]        # Work, Fun, or Projects
 tags: ["travel"]
-draft: true                 # change to false (or delete the line) to publish
+draft: true                 # set false, or delete this line, to publish
 ---
 
-<!-- Photos: drop them in this folder and reference them by filename, e.g.
+<!-- Put photos in this folder. Reference each one by filename:
      ![Caption](photo-1.jpg)
-     The first file whose name contains "featured" becomes the card thumbnail. -->
+     The first file with "featured" in its name becomes the card thumbnail. -->

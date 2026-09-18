@@ -6,30 +6,27 @@ showDateUpdated: true
 showWordCount: false
 ---
 
-Running notes on layover hotels: what the gym actually has, and anything else worth knowing.
+Notes on layover hotels: what the gym has, and anything else worth knowing.
 
 <!--
-  HOW TO ADD A HOTEL (two steps):
+  HOW TO ADD A HOTEL
 
-  1. Add a row to the table. The first column is a link to the hotel's section
-     further down: [Name](#some-id). The "#some-id" must match the {#some-id}
-     you put on that hotel's heading in step 2. Keep ids short, lowercase, no
-     spaces: airport code + hotel name works well, e.g. #ida-best-western.
+  1. Add a row to the table. Put a link in the first column: [Name](#some-id).
+  2. Add a "## Hotel name {#some-id}" section below the table.
+     The #some-id in the row must match the {#some-id} on the heading.
+     Use lowercase, no spaces. Example: airport code + hotel name, #ida-best-western.
+  3. Put the photos in this folder (content/hotel-tracker/).
+  4. Copy the gallery block from an existing hotel. Change the filenames.
 
-  2. Add a "## Hotel name {#some-id}" section at the bottom, in the same order
-     as the table. For photos, drop the files into THIS folder
-     (content/hotel-tracker/) and add one line per photo, exactly like in a post:
-
-     ![Gym](ida-best-western-gym.jpg)
-
-  Rating: use 1-5 stars (⭐). Keep the table columns short so it stays readable
-  on a phone.
+  Rating: 1 to 5 stars. Keep the table columns short so the table fits a phone screen.
 -->
 
 | Hotel | Airport | Gym | Rating | Notes |
 | --- | --- | --- | --- | --- |
 | [Best Western](#ida-best-western) | IDA | Cable machine, dumbbells | ⭐⭐ | Bike rental |
-| [Hilton](#ord-hilton) | ORD | Full gym | ⭐⭐⭐⭐⭐ | Co-lo w/ airport |---
+| [Hilton](#ord-hilton) | ORD | Full gym | ⭐⭐⭐⭐⭐ | Co-lo w/ airport |
+
+---
 
 ## Best Western, Idaho Falls {#ida-best-western}
 
@@ -51,5 +48,3 @@ Running notes on layover hotels: what the gym actually has, and anything else wo
   <img src="hilton-ord-1.jpeg" class="grid-w33" />
   <img src="hilton-ord-2.jpeg" class="grid-w33" />
 {{< /gallery >}}
-
-<!-- Photos go here, one per line:  ![Gym](ida-best-western-gym.jpg) -->

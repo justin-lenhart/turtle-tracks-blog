@@ -12,12 +12,14 @@ Every leg I've logged.
 
 <!--
   Map code:  static/js/flight-map.js
-  Map data:  static/data/flights.geojson  (re-export from the logbook repo to refresh)
+  Map data:  docs/map_data.geojson in the logbook repo on GitHub, read live.
+             static/data/flights.geojson is the fallback if GitHub is unreachable.
 
-  The explicit width above is needed: Blowfish wraps article content in
-  "max-w-fit", which shrinks to the text width. Without a width the map
+  Keep the explicit width on the div above. Blowfish wraps article content in
+  "max-w-fit", which shrinks to the text width. Without a width, the map
   collapses to a narrow strip on short pages.
 
-  Keep JavaScript in the .js file, NOT inline here. A blank line inside an
-  inline <script> ends the HTML block and Hugo mangles the rest as markdown.
+  Keep the JavaScript in the .js file. Do not inline it here. A blank line
+  inside an inline <script> ends the HTML block. Hugo then renders the rest as
+  markdown.
 -->
