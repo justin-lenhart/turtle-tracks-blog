@@ -81,4 +81,4 @@ Blowfish has a pretty neat thing called "shortcode", which are simple text calls
 - Write about a cool cherry and maple breadbox I designed and am making
 - **I am just finishing a four day trip where I was mostly in Grand Island, NE during the start of the Nebraska State Fair. Lots of corndogs and goats! Tomorrow, I will write my first travel post on the neat things I saw during my visit.**
 
-![Nebraska State Fair 2026](featured-2026.08-30.jpeg)
+![Nebraska State Fair 2026](featured-2026.08-30.jpeg "Nebraska State Fair")

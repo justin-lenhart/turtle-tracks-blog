@@ -5,7 +5,7 @@ showDate: false
 
 I'm Justin. I fly for a regional airline, so most of my week happens somewhere
 other than home — usually a city I didn't pick, occasionally one worth
-photographing.
+photographing. 
 
 At home there's a wood shop I'm slowly getting less bad at, a Raspberry Pi
 running my photo library, and a running list of things I've built because the
@@ -14,8 +14,10 @@ this website. I am also lucky enough to have someone in my life who tolerates th
 
 When I can get more than a week off, I try to put on a 60-liter pack and go somewhere
 I'll see more bears than people. I take a lot of landscape photos that never
-quite match what it actually looked like.
+quite match what it actually looked like. 
 
 This is where the trip reports, build logs, and photos end up so I can find them
 again. Mostly for me. If you found it some other way, the
 [projects](/projects/) are probably where to start.
+
+If you somehow came across this site, and would like to more about me professionally, my [LinkedIn](https://www.linkedin.com/in/justin-lenhart) is mostly up-to-date. 

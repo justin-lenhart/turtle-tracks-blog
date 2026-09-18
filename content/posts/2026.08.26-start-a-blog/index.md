@@ -73,4 +73,4 @@ Obsidian is on the list — the idea is to point a vault at the `content/` folde
 so I can draft on the couch without thinking about the repo — but I haven't set
 it up, and Cursor is working fine.
 
-![On the ramp](featured_2026.08.26_1.jpeg)
+![On the ramp](featured_2026-08-26_1.jpeg)

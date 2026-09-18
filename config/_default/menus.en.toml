@@ -22,6 +22,11 @@
   pageRef = "about"
   weight = 40
 
+[[main]]
+  name = "Hotel Tracker"
+  pageRef = "hotel-tracker"
+  weight = 35
+
 # Links at the bottom of every page.
 # "url" is used instead of "pageRef" for anything outside this site.
 [[footer]]
