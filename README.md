@@ -38,12 +38,16 @@ Reference a photo in the post with `![Caption](photo-1.jpg)`. A file with
 
 **Front matter cheat sheet.** Front matter is the block at the top of `index.md`.
 
-| Field        | Pick from                                                                     | Notes                                                                                 |
-| ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `categories` | `Work`, `Fun`, `Projects`                                                     | What kind of post is this?                                                            |
-| `tags`       | `travel`, `woodworking`, `hiking`, `smartHome`, `electronics`, `hugo`, `meta` | What is the post about? New tags are fine.                                            |
+
+| Field        | Pick from                                                                     | Notes                                                                                  |
+| ------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `categories` | `Work`, `Fun`, `Projects`                                                     | What kind of post is this?                                                             |
+| `tags`       | `travel`, `woodworking`, `hiking`, `smartHome`, `electronics`, `hugo`, `meta` | What is the post about? New tags are fine.                                             |
 | `projects`   | a folder name under `content/projects/`                                       | Example: `["bread-box"]`. Use the FOLDER name, not the title. Delete the line if none. |
-| `draft`      | `true` / `false`                                                              | `true` = not published. Set `false` or delete the line to publish.                    |
+| `draft`      | `true` / `false`                                                              | `true` = not published. Set `false` or delete the line to publish.                     |
+
+
+
 
 ## 2. Preview locally
 
@@ -69,6 +73,8 @@ git add -A
 git commit -m "New post: ..."
 git push
 ```
+
+
 
 ## 4. Pages I edit now and then
 
@@ -105,6 +111,7 @@ instead of `["bread-box"]` creates a second, empty project with no warning.
 
 All config is in `config/_default/`.
 
+
 | To change                                             | File                | Section                   |
 | ----------------------------------------------------- | ------------------- | ------------------------- |
 | Site title, author name/photo/links                   | `languages.en.toml` | `[params.author]`         |
@@ -115,6 +122,7 @@ All config is in `config/_default/`.
 | Theme, baseURL, taxonomies                            | `hugo.toml`         |                           |
 | Markdown settings (`unsafe = true`, do not change)    | `markup.toml`       |                           |
 
+
 **Post metadata toggles** (`[article]` in `params.toml`): `showDate`,
 `showDateUpdated` ("last modified"), `showWordCount` ("638 words"),
 `showReadingTime` ("3 min read").
@@ -123,6 +131,7 @@ All config is in `config/_default/`.
 date, not `YYYY-MM-DD` placeholders. The reference values are always
 `Mon Jan 2 15:04:05 MST 2006`. Arrange them in the shape you want.
 
+
 | Set it to                 | You get                   |
 | ------------------------- | ------------------------- |
 | `2 January 2006`          | 27 August 2026            |
@@ -130,6 +139,7 @@ date, not `YYYY-MM-DD` placeholders. The reference values are always
 | `Jan 2, 2006`             | Aug 27, 2026              |
 | `2006-01-02`              | 2026-08-27                |
 | `Monday, January 2, 2006` | Thursday, August 27, 2026 |
+
 
 **Taxonomies.** The `projects:` front matter works because `hugo.toml` lists
 `project = "projects"` under `[taxonomies]`. The same applies to `tags` and
@@ -180,11 +190,11 @@ generated, gitignored, never committed:
 └── resources/                      Hugo's image-processing cache
 ```
 
-**`_index.md` vs `index.md`.** `_index.md` is a list page. It contains other
+`_index.md` **vs** `index.md`**.** `_index.md` is a list page. It contains other
 pages (posts, projects). `index.md` is a single page. It can hold photos but
 not child pages.
 
-**`assets/` vs `static/`.** Hugo processes files in `assets/` (resize,
+`assets/` **vs** `static/`**.** Hugo processes files in `assets/` (resize,
 optimize). Paths are relative to `assets/`, for example `img/avatar.jpeg`.
 Hugo copies files in `static/` byte for byte. Hugo serves
 `static/data/flights.geojson` at `/data/flights.geojson`.
@@ -213,6 +223,8 @@ Never edit inside `themes/`. A theme update overwrites it.
 - [Lempa Video 1/2 - Build Static Site](https://www.youtube.com/watch?v=MX4yy1dTVYg&t=820s)
 - [Lempa Video 2/2 - Publish Static Site](https://www.youtube.com/watch?v=FZMgUSlNp-0&list=PLL2R0PhD_K3E&index=3)
 - [Cloudflare deployment dashboard](https://dash.cloudflare.com/fb90c5484e857484c4d69a2226ea081e/workers/services/view/turtle-tracks-blog/production/domains)
+
+
 
 ## Issues
 
