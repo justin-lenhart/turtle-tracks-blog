@@ -42,8 +42,6 @@ Phone never rang. Some reserve blocks are like that.
 
 It's done. Four months, two versions, one recipient.
 
-{{< youtubeLite id="VIDEO_ID_HERE" label="Building a hardwood bread box" >}}
-
 ### V0.1, and why it died
 
 The whole thing started with a [two-story bread box plan on the Kreg
