@@ -5,7 +5,7 @@ summary: "A cherry-and-maple bread box with box-joint corners, a bevel-front lid
 projects: ["bread-box"]        # a folder name under content/projects/. Delete this line if none.
 categories: ["Work", "Projects"]        # Work, Fun, or Projects
 tags: ["travel", "woodworking", "cad"]
-draft: true                 # set false, or delete this line, to publish
+draft: false                 # set false, or delete this line, to publish
 ---
 
 <!-- Put photos in this folder. Reference each one by filename:
@@ -13,6 +13,8 @@ draft: true                 # set false, or delete this line, to publish
      The first file with "featured" in its name becomes the card thumbnail. -->
 
 ![Finished box](breadbox_placeholder.jpeg "Cherry and maple, box joints")
+
+{{< youtubeLite id="oQWnw2bhj2o" label="Bread Box Project Video" >}}
 
 ## Grapevine, Texas
 
