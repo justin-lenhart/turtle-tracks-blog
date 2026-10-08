@@ -11,7 +11,7 @@ Originally started in April 2026, but I quickly found out that precision hardwoo
 
 I decided to redesign the box on CAD and implement finger joints for the corners for a more refined look. If I'm going to spend lots of time on something, it might as well look good, right? 
 
-![Page 1](BreadBoxV0.2_Overall_01.png "Elevation view, overall dimensions & arrangement")
-![Page 2](BreadBoxV0.2_Rough_Cuts_02.png "Rough cut & lumber requirements")
-![Page 3](BreadBoxV0.2_Glue_Finishing_03.png "Final dimensions & glue-up plan")
-![Page 4](BreadBoxV0.2-4.png "Construction plan & detail views")
+![Page 1](BreadBoxV0.2_Overall_01.jpeg "Elevation view, overall dimensions & arrangement")
+![Page 2](BreadBoxV0.2_Rough_Cuts_02.jpeg "Rough cut & lumber requirements")
+![Page 3](BreadBoxV0.2_Glue_Finishing_03.jpeg "Final dimensions & glue-up plan")
+![Page 4](BreadBoxV0.2_Detail_04.jpeg "Construction plan & detail views")

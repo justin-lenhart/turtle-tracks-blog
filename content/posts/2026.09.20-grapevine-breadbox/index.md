@@ -12,7 +12,7 @@ draft: false                 # set false, or delete this line, to publish
      ![Caption](photo-1.jpg)
      The first file with "featured" in its name becomes the card thumbnail. -->
 
-![Finished box](breadbox_placeholder.jpeg "Cherry and maple, box joints")
+![Finished box](/projects/bread-box/bread-box1.jpeg "Cherry and maple, box joints")
 
 {{< youtubeLite id="oQWnw2bhj2o" label="Bread Box Project Video" >}}
 
@@ -35,10 +35,6 @@ The entirety of Main St was blocked off and full of food stalls, shops, and peda
 Phone never rang. Some reserve blocks are like that.
 
 ## The Bread Box
-
-> [!TIP]+ Photos coming
-> Photos for the completed breadbox will be uploaded on 22 Sep 2026.
-{icon="comment"}
 
 It's done. Four months, two versions, one recipient.
 
@@ -103,20 +99,12 @@ instead of two left-handed sides. A04 has the miter gauge setup drawn out. This
 is one of those cuts where the setup takes twenty minutes and the cut takes
 four seconds. I had never made such a precision angle cut before, but came out satisfied after a few test cuts. 
 
-![Bevel setup](breadbox_placeholder.jpeg "Taped pair, miter gauge at 50.5°")
-
 **Box joints, on scrap first.** Step 8 of the plan is underlined, because I
 underlined it: *mill at least two test pieces at ¾ in to calibrate — no real
 panel until a test corner fits.* That one line is the actual difference between
 V0.1 and V0.2. Not the CAD, not the finger joints — the discipline to burn scrap
 until the jig is right instead of finding out on a panel I spent two hours
 milling. I used a [Jessem finger joint jig](https://jessem.com/products/box-joint-jig?srsltid=AU7gw4V_udEnc6UyccEKra-sOKE-3eXmocgM5pKn2fMATMrT5y9X1wWk) for the joints. The tutorial videos make it seem quite easy to use, but I was pretty disappointed with the first few joints I produced. However, after several days and about 10 test joints of tinkering, I was quite satisfied with the resulting joints. I was still a bit anxious when it came time to mill the project lumber, but they came out very well. 
-
-{{< gallery >}}
-  <img src="breadbox_placeholder.jpeg" class="grid-w33" />
-  <img src="breadbox_placeholder.jpeg" class="grid-w33" />
-  <img src="breadbox_placeholder.jpeg" class="grid-w33" />
-{{< /gallery >}}
 
 **The cutting board.** Cherry–maple–cherry glue-up riding in a ¾ × ¼ groove
 routed the full length of both inside faces. The detail I'm proudest of is in
@@ -125,17 +113,12 @@ glued, to the real interior width — not the drawn one. The drawing admits the
 box won't come out exactly as drawn, which felt like the first genuinely
 experienced thing I've ever put on a set of plans.
 
-{{< gallery >}}
-  <img src="breadbox_placeholder.jpeg class="grid-w50" />
-  <img src="breadbox_placeholder.jpeg" class="grid-w50" />
-{{< /gallery >}}
-
 **Finish.** Odie's Oil, wiped on thin and buffed. Cherry and maple sit at about
 the same value raw, and the oil is the moment they separate — the cherry goes
 warm and the maple stays pale, and the joints you spent all that time on finally
 read from across the room. It was my first time using Odie's Oil - which came highly recommended by several people. It was MUCH stickier than I expected on application, and I was genuinely worried it would remain sticky. After a few hours of drying though, it has a very pleasant feel. No stickiness here. 
 
-![Finish going on](breadbox_placeholder.jpeg "The moment the grain shows up")
+![Finished, on the counter](/projects/bread-box/bread-box2.jpeg "Oiled and in service, between the knives and the toaster")
 
 ### Tampa Hackerspace
 
